@@ -15,4 +15,4 @@ ENV N8N_PROTOCOL=https
 EXPOSE 5678
 
 # ---- Start server ----
-CMD ["tini", "--", "n8n"]
+CMD ["n8n", "start"]

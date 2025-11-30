@@ -7,7 +7,6 @@ ENV N8N_DISABLE_PRODUCTION_MAIN_PROCESS=true
 ENV N8N_LOG_LEVEL=debug
 ENV N8N_DIAGNOSTICS_ENABLED=false
 
-# host + port
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 ENV N8N_PROTOCOL=https
@@ -16,4 +15,4 @@ ENV N8N_PROTOCOL=https
 EXPOSE 5678
 
 # ---- Start server ----
-CMD ["n8n"]
+CMD ["tini", "--", "n8n"]
